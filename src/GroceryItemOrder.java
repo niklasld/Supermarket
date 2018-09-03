@@ -1,12 +1,13 @@
 public class GroceryItemOrder {
 
     private String name;
-    private int quantity;
+    private int quantity, itemId;
     private double price;
 
-    public GroceryItemOrder(String name, double price) {
+    public GroceryItemOrder(String name, int itemId, double price) {
         this.name = name;
         this.quantity = 1;
+        this.itemId = itemId;
         this.price = price;
     }
 
@@ -26,28 +27,19 @@ public class GroceryItemOrder {
         this.quantity = quantity;
     }
 
+    public int getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+    }
+
     public double getPrice() {
         return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public double getCost() {
-        double cost = getQuantity()*getPrice();
-
-        double totalcost = cost;
-        return totalcost;
-    }
-
-    @Override
-    //format toString nicely this is just a test
-    public String toString() {
-        return "GroceryItemOrder{" +
-                "name='" + name + '\'' +
-                ", quantity=" + quantity +
-                ", price=" + getCost() +
-                '}';
     }
 }
