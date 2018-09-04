@@ -42,4 +42,14 @@ public class GroceryItemOrder {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "GroceryItemOrder{" +
+                "name='" + name + '\'' +
+                ", quantity=" + quantity +
+                ", itemId=" + itemId +
+                ", price=" + price +
+                '}';
+    }
 }
