@@ -45,11 +45,10 @@ public class GroceryItemOrder {
 
     @Override
     public String toString() {
-        return "GroceryItemOrder{" +
-                "name='" + name + '\'' +
-                ", quantity=" + quantity +
-                ", itemId=" + itemId +
-                ", price=" + price +
-                '}';
+        if(itemId==0){
+            System.out.println("ID:\t\t\t\tPris:\t\t\t\tVare:");
+        }
+        return ""+itemId+"\t\t\t\t"+price+"\t\t\t\t"+name+"\n";
+
     }
 }

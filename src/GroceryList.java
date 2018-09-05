@@ -3,11 +3,14 @@ import java.util.ArrayList;
 public class GroceryList {
 
     private int itemId, quantity;
-    private ArrayList<Object> groceries = new ArrayList<Object>();
+    private ArrayList<Object> groceries = new ArrayList<>();
 
     public GroceryList(int itemId, int quantity) {
         this.itemId = itemId;
         this.quantity = quantity;
+    }
+
+    public GroceryList() {
     }
 
     public int getItemId() {
@@ -47,11 +50,14 @@ public class GroceryList {
     }
 
     public void getGroceryItems() {
-        ArrayList<Object> peter = new ArrayList<>();
-        peter = groceries;
-        for(GroceryItemOrder a : peter) {
-            System.out.println(a);
+        setGroceryItems();
+
+        for(int i = 0; i<groceries.size();i++){
+            System.out.println(groceries);
         }
+        /*for(GroceryItemOrder grocerieList : groceries) {
+            System.out.println(grocerieList.getItemId());
+        }*/
 
     }
     //make this method
