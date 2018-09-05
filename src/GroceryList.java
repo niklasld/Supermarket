@@ -2,31 +2,10 @@ import java.util.ArrayList;
 
 public class GroceryList {
 
-    private int itemId, quantity;
-    private ArrayList<Object> groceries = new ArrayList<>();
-
-    public GroceryList(int itemId, int quantity) {
-        this.itemId = itemId;
-        this.quantity = quantity;
-    }
+    private ArrayList<GroceryItemOrder> groceries = new ArrayList<>();
+    private ArrayList<GroceryBuyList> buyList = new ArrayList<>();
 
     public GroceryList() {
-    }
-
-    public int getItemId() {
-        return itemId;
-    }
-
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 
     public void setGroceryItems() {
@@ -50,32 +29,44 @@ public class GroceryList {
     }
 
     public void getGroceryItems() {
-        setGroceryItems();
-
-        for(int i = 0; i<groceries.size();i++){
-            System.out.println(groceries);
+        for(GroceryItemOrder grocerieList : groceries) {
+            System.out.println("ID: "+grocerieList.getItemId()+"\t\tPris: "+grocerieList.getPrice()+"\t\tVare: "+grocerieList.getName());
         }
-        /*for(GroceryItemOrder grocerieList : groceries) {
-            System.out.println(grocerieList.getItemId());
-        }*/
 
     }
-    //make this method
-    /*public double getTotalCost() {
-        double totalCost = 0;
-        int a = -1;
-        int itemId = a;
-        int quantity = a;
-        for (int i; i < items.size(); i++) {
-            itemId = items.get(i).getSelectionId();
-            quantity = items.get(i).getQuantity();
-            if (itemId != a && quantity != a) {
-                totalCost += groceries.get(itemId).getCost() * quantity;
-            }
-            itemId = a;
-            quantity = a;
+
+    public void addToBuyList(int itemId, int quantity) {
+        buyList.add(new GroceryBuyList(itemId,quantity));
+    }
+    public void getBuyList() {
+        double cost, totalCost;
+        int listItemId, listQuantity;
+        System.out.println();
+        for(GroceryBuyList groceryBuyList : buyList) {
+            listItemId = groceryBuyList.getItemId();
+            listQuantity = groceryBuyList.getQuantity();
+            cost = groceries.get(listItemId).getPrice();
+            totalCost = groceries.get(listItemId).getPrice()*listQuantity;
+
+            System.out.println("Vare: "+groceries.get(listItemId).getName()+"\t\t\tPris: "+cost+"*"+listQuantity+" = "+totalCost+"\t\t\tMængde: "+listQuantity);
+        }
+        System.out.println("\nTotal Pris: "+getTotalCost());
+
+    }
+
+    public double getTotalCost() {
+        double totalCost=0;
+        int listItemId, listQuantity;
+
+        for (GroceryBuyList buyListPrice: buyList) {
+            listItemId = buyListPrice.getItemId();
+            listQuantity = buyListPrice.getQuantity();
+
+            totalCost+=groceries.get(listItemId).getPrice()*listQuantity;
         }
 
         return totalCost;
-    }*/
+    }
+
+
 }

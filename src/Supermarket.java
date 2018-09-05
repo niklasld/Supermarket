@@ -7,7 +7,13 @@ public class Supermarket {
         //GroceryList[] buyList = new GroceryList[10];
         GroceryList buyList = new GroceryList();
 
+        buyList.setGroceryItems();
         buyList.getGroceryItems();
+
+        buyList.addToBuyList(1,3);
+        buyList.addToBuyList(5,1);
+
+        buyList.getBuyList();
 
     }
 }
