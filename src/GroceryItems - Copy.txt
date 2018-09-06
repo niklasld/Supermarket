@@ -1,0 +1,17 @@
+﻿løg 0 1.10
+Kartofler 1 15.50
+Gulerødder 2 12.25
+hakketokse 3 32.50
+hakketflæsk 4 27.00
+Sandwitchbrød 5 11.50
+Iceberg 6 10.25
+Prince 7 41.50
+Svampe 8 15.50
+Skummetmælk 9, 8.50
+Letmælk 10 9.50
+Sødmælk 11 10.50
+Hvedemel 12 15.50
+Maraubou 13 27.00
+Slik 14 8.50
+Sølvpapir 15 5.50
+Bagepapir 16 12.50

@@ -1,0 +1,17 @@
+loeg 0 1,10
+Kartofler 1 15,50
+Guleroedder 2 12,25
+hakketokse 3 32,50
+hakketflaesk 4 27,00
+Sandwitchbroed 5 11,50
+Iceberg 6 10,25
+Prince 7 41,50
+Svampe 8 15,50
+Skummetmaelk 9 8,50
+Letmaelk 10 9,50
+Soedmaelk 11 10,50
+Hvedemel 12 15,50
+Maraubou 13 27,00
+Slik 14 8,50
+Soelvpapir 15 5,50
+Bagepapir 16 12,50

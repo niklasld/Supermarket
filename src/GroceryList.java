@@ -1,14 +1,20 @@
 import java.util.ArrayList;
 
+
 public class GroceryList {
 
     private ArrayList<GroceryItemOrder> groceries = new ArrayList<>();
     private ArrayList<GroceryBuyList> buyList = new ArrayList<>();
+    private Files file = new Files();
 
     public GroceryList() {
     }
 
     public void setGroceryItems() {
+        file.readFile();
+        groceries = file.returnArray();
+
+        /*
         groceries.add(new GroceryItemOrder("1 stk. løg", 0, 1.10));
         groceries.add(new GroceryItemOrder("1kg Kartofler", 1, 15.50));
         groceries.add(new GroceryItemOrder("1kg Gulerødder", 2, 12.25));
@@ -26,6 +32,7 @@ public class GroceryList {
         groceries.add(new GroceryItemOrder("Blandet slik pr. 100g", 14, 8.50));
         groceries.add(new GroceryItemOrder("Sølvpapir", 15, 5.50));
         groceries.add(new GroceryItemOrder("Bagepapir", 16, 12.50));
+        */
     }
 
     public void getGroceryItems() {
